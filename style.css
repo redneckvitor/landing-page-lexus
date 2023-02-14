@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap");
+@font-face {
+  font-family: "nobel";
+  src: url("https://www.lexus.com/content/dam/lexus/typography/nobel/nobel-book.woff") format("woff"), url("/etc.clientlibs/lexus/clientlibs/lexus-react/resources/static/media/nobel-book.fea428b8.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "nobel-bold";
+  src: url("https://www.lexus.com/content/dam/lexus/typography/nobel/nobel-bold.woff") format("woff"), url("/etc.clientlibs/lexus/clientlibs/lexus-react/resources/static/media/nobel-bold.1bb99c98.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "nobel-book";
+  src: url("https://www.lexus.com/content/dam/lexus/typography/nobel/nobel-book.woff") format("woff"), url("/etc.clientlibs/lexus/clientlibs/lexus-react/resources/static/media/nobel-book.fea428b8.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "nobel-regular";
+  src: url("https://www.lexus.com/content/dam/lexus/typography/nobel/nobel-regular.woff") format("woff"), url("/etc.clientlibs/lexus/clientlibs/lexus-react/resources/static/media/nobel-regular.baff0f5c.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  line-height: 1.75;
+  font-family: "nobel";
+  background-color: #fff;
+  color: #000;
+  background-image: url("https://toyotaassets.scene7.com/is/image/toyota/Lexus-RC-gallery-1-desktop-1440x811-LEX-RCG-MY23-0007?wid=1440&hei=811");
+  background-size: 100%;
+}
+
+.padding {
+  padding: 2%;
+}
+
+button {
+  font-size: 1.5em;
+  padding: 1% 4% 1% 4%;
+  margin: 1%;
+  border: unset;
+  background-color: #72757e;
+  color: #fff;
+  transition: 0.4s;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #666971;
+}
+
+::selection {
+  background-color: #72757e;
+  color: #f0f0f0;
+}
+
+header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid #fff;
+}
+header nav {
+  min-width: 30%;
+  max-width: 80%;
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+header nav a {
+  text-decoration: none;
+  font-family: "nobel";
+  font-size: 2vh;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.4s;
+}
+header nav a:hover {
+  color: gray;
+}
+
+#main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 90vh;
+}
+#main-section h1.title {
+  font-family: "nobel";
+  font-size: 8vh;
+  color: #fff;
+  font-weight: regular;
+  text-align: left;
+  max-width: 90%;
+  line-height: 1.25;
+  margin: 5%;
+}
+#main-section h2.title {
+  font-family: "nobel-book";
+  font-size: 4vh;
+  color: #fff;
+  font-weight: regular;
+}
+
+footer {
+  background-color: #101010;
+  height: 28vh;
+}
+footer p {
+  color: #000;
+}
+
+/*# sourceMappingURL=style.css.map */

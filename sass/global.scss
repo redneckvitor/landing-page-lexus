@@ -1,0 +1,208 @@
+// Primary-font import
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+// Secondary-font import
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap");
+
+@font-face {
+  font-family: "nobel";
+  src: url("https://www.lexus.com/content/dam/lexus/typography/nobel/nobel-book.woff")
+      format("woff"),
+    url("/etc.clientlibs/lexus/clientlibs/lexus-react/resources/static/media/nobel-book.fea428b8.woff")
+      format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "nobel-bold";
+  src: url("https://www.lexus.com/content/dam/lexus/typography/nobel/nobel-bold.woff")
+      format("woff"),
+    url("/etc.clientlibs/lexus/clientlibs/lexus-react/resources/static/media/nobel-bold.1bb99c98.woff")
+      format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "nobel-book";
+  src: url("https://www.lexus.com/content/dam/lexus/typography/nobel/nobel-book.woff")
+      format("woff"),
+    url("/etc.clientlibs/lexus/clientlibs/lexus-react/resources/static/media/nobel-book.fea428b8.woff")
+      format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "nobel-regular";
+  src: url("https://www.lexus.com/content/dam/lexus/typography/nobel/nobel-regular.woff")
+      format("woff"),
+    url("/etc.clientlibs/lexus/clientlibs/lexus-react/resources/static/media/nobel-regular.baff0f5c.woff")
+      format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+
+//
+//
+
+$color-primary: #fff; // 60%
+$color-secondary: #000; // 30%
+$color-tertiary: #72757e; // 10%
+$color-hightlight: #2cb67d; // 1%
+
+$color-title: $color-primary;
+$color-paragraph: $color-secondary;
+$color-button: $color-tertiary;
+
+$color-background-2: #fff;
+$color-background: #fff;
+
+$font-1: "nobel";
+$font-2: "nobel-bold";
+$font-3: "nobel-book";
+$font-4: "nobel-regular";
+
+$font-sans-serif: "nobel";
+$font-serif: "Lora", serif;
+
+//
+//
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  line-height: 1.75;
+  font-family: $font-sans-serif;
+  background-color: $color-background;
+  color: $color-secondary;
+
+  background-image: url("https://toyotaassets.scene7.com/is/image/toyota/Lexus-RC-gallery-1-desktop-1440x811-LEX-RCG-MY23-0007?wid=1440&hei=811");
+  background-size: 100%;
+}
+
+.padding {
+  padding: 2%;
+}
+
+button {
+  font-size: 1.5em;
+  padding: 1% 4% 1% 4%;
+  margin: 1%;
+  border: unset;
+  background-color: $color-button;
+  color: $color-title;
+  transition: 0.4s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($color: $color-button, $amount: 5);
+  }
+}
+
+::selection {
+  background-color: $color-tertiary;
+  color: #f0f0f0;
+}
+
+//
+//
+
+@mixin text-style(
+  $font-family: "Arial",
+  $font-size: 2.5vh,
+  $text-color: black,
+  $font-weight: regular
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  color: $text-color;
+  font-weight: $font-weight;
+}
+
+// Elementos e classes customizadas:
+
+header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+
+  border-bottom: 1px solid #fff;
+
+  nav {
+    min-width: 30%;
+    max-width: 80%;
+    height: inherit;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      @include text-style($font-1, 2vh, #fff, bold);
+      transition: 0.4s;
+
+      &:hover {
+        color: gray;
+      }
+    }
+  }
+}
+
+#main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  height: 90vh;
+  .title {
+  }
+
+  h1.title {
+    @include text-style($font-1, 8vh, $color-primary);
+
+    text-align: left;
+    max-width: 90%;
+
+    line-height: 1.25;
+
+    margin: 5%;
+  }
+
+  h2.title {
+    @include text-style($font-3, 4vh, $color-primary);
+  }
+}
+
+#section-1 {
+}
+
+footer {
+  background-color: #101010;
+  height: 28vh;
+
+  p {
+    color: $color-secondary;
+  }
+}
+
+// Media query para celulares em geral
+@media only screen and (max-aspect-ratio: 1/1) and (orientation: portrait) {
+  //
+  // Media query para celulares antigos, como Iphone 5
+  @media only screen and (min-aspect-ratio: 40/72) and (orientation: portrait) {
+  }
+
+  // Media query para celulares ainda mais simples e antigos
+  @media only screen and (min-aspect-ratio: 22/40) and (orientation: portrait) {
+  }
+}
